@@ -3,7 +3,7 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const cors = require('cors')
 const morgan = require('morgan')
-const port = process.env.PORT || 3000
+const port = process.env.PORT || 8081
 
 // App container
 const app = express()
@@ -14,7 +14,13 @@ app.use(morgan('combined'))
 
 app.get('/', (req, res) => {
   res.send({
-    message: 'Hello world'
+    message: 'Hello world!'
+  })
+})
+
+app.post('/register', (req, res) => {
+  res.send({
+    message: `User ${req.body.email} registered with success!`
   })
 })
 
