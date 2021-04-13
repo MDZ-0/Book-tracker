@@ -8,7 +8,7 @@ const port = process.env.PORT || 3000
 // App container
 const app = express()
 app.use(cors())
-app.options("*", cors())
+app.options('*', cors())
 app.use(bodyParser.json())
 app.use(morgan('combined'))
 
