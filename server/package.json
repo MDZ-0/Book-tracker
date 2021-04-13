@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npm run lint && nodemon src/app.js --exec",
-    "lint": "node_modules/.bin/eslint **/*.js"
+    "start": "npm run lint && npm run set",
+    "lint": "node_modules/.bin/eslint **/*.js --fix",
+    "set": "node_modules/.bin/nodemon src/app.js"
   },
   "keywords": [],
   "author": "",
