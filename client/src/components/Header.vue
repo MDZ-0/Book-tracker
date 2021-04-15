@@ -17,6 +17,11 @@
         <v-spacer></v-spacer>
         <v-toolbar-items>
             <v-btn 
+            @click="navigateTo({name : 'Login'})"
+            text dark class="purple">
+                Login
+            </v-btn>
+            <v-btn 
             @click="navigateTo({name : 'Register'})"
             text dark class="purple">
                 Sign Up
@@ -30,7 +35,8 @@
 export default {
     methods: {
         navigateTo(route){
-            this.$router.push(route)
+            if(this.$route.name != route.name)
+                this.$router.push(route)
         }
     }
 }
