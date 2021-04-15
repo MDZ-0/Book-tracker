@@ -4,7 +4,7 @@ const bodyParser = require('body-parser')
 const cors = require('cors')
 const morgan = require('morgan')
 const config = require('./config/config')
-const {sequelize} = require('./models')
+const { sequelize } = require('./models')
 const port = process.env.PORT || 8081
 
 // App container
@@ -31,4 +31,3 @@ sequelize.sync().then(() => {
     console.log(`Example app listening at http://localhost:${config.port}...`)
   })
 })
-
