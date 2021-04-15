@@ -7,13 +7,13 @@
             <v-toolbar-title>Register</v-toolbar-title>
           </v-toolbar>
           <div class="centered-input pl-4 pr-4 pt-2 pb-2"> 
-            <input type="email" name="email" placeholder="email" v-model="email"/> 
+            <v-text-field label="Email" v-model="email"></v-text-field>
             <br>
-            <input type="password" name="password" placeholder="********" v-model="password"/> 
+            <v-text-field label="Password" v-model="password"></v-text-field>
             <br>
             <div width="60%" v-html="error" class="error" />
             <br >
-            <v-btn class="purple" @click="register">Register</v-btn>
+            <v-btn class="white--text purple" @click="register">Register</v-btn>
           </div>
         </div>
       </v-flex>
