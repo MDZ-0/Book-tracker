@@ -1,15 +1,24 @@
 <template>
-  <div>
-    <h1>Register</h1>
-    <input type="email" name="email" placeholder="email" v-model="email"/> 
-    <br>
-    <input type="password" name="password" placeholder="********" v-model="password"/> 
-    <br>
-    <div v-html="error" class="error" />
-    <br >
-    <button @click="register">Register</button>
-  </div>
-    
+  <v-container width="200px" class="pa-md-4 mx-lg-auto" elevation="12">
+    <v-layout column>
+      <v-flex xs6 offest-xs3>
+        <div class="white elevation-2">
+          <v-toolbar flat dense class="purple" dark>
+            <v-toolbar-title>Register</v-toolbar-title>
+          </v-toolbar>
+          <div class="centered-input pl-4 pr-4 pt-2 pb-2"> 
+            <input type="email" name="email" placeholder="email" v-model="email"/> 
+            <br>
+            <input type="password" name="password" placeholder="********" v-model="password"/> 
+            <br>
+            <div width="60%" v-html="error" class="error" />
+            <br >
+            <v-btn class="purple" @click="register">Register</v-btn>
+          </div>
+        </div>
+      </v-flex>
+    </v-layout>  
+  </v-container> 
 </template>
 
 <script>
@@ -40,6 +49,9 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .error{
-  color :red;
+  color : whitesmoke;
+}
+.centered-input{
+  text-align:center;
 }
 </style>
