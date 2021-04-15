@@ -13,7 +13,9 @@ module.exports = {
   async register (req, res) {
     try {
       const user = await User.create(req.body)
+      delete user.password
       const userJson = user.toJSON()
+      delete userJson.password
       res.send({
         user: userJson,
         token: jwtSignUser(userJson)
@@ -43,7 +45,9 @@ module.exports = {
           error:  'The login information was incorrect'
         })
       }
+      
       const userJson = user.toJSON()
+      delete userJson.password
       res.send({
         user :userJson
         ,token: jwtSignUser(userJson)

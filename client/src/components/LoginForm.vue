@@ -13,7 +13,7 @@
             <br>
             <div width="60%" v-html="error" class="error" />
             <br >
-            <v-btn class="white--text purple" @click="register">Login</v-btn>
+            <v-btn class="white--text purple" @click="login">Login</v-btn>
           </div>
         </div>
       </v-flex>
@@ -32,12 +32,14 @@ export default {
     }
   },
   methods: {
-    async register(){
+    async login(){
       try {
-        await AuthentificationService.login({
-        email: this.email,
-        password: this.password
-      })
+        const response = await AuthentificationService.login({
+          email: this.email,
+          password: this.password
+        })
+        this.$store.dispatch('setToken', response.data.token)
+        this.$store.dispatch('setUser', response.data.user)
       } catch (error) {
         this.error = error.response.data.error
       }      
