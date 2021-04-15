@@ -20,11 +20,12 @@ app.get('/', (req, res) => {
   })
 })
 
-app.post('/register', (req, res) => {
-  res.send({
-    message: `User ${req.body.email} registered with success!`
-  })
-})
+// app.post('/register', (req, res) => {
+//   res.send({
+//     message: `User ${req.body.email} registered with success!`
+//   })
+// })
+require('./routes')(app)
 
 sequelize.sync().then(() => {
   app.listen(port, () => {
