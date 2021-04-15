@@ -2,9 +2,11 @@
   <div>
     <h1>Register</h1>
     <input type="email" name="email" placeholder="email" v-model="email"/> 
-    <br/>
+    <br>
     <input type="password" name="password" placeholder="********" v-model="password"/> 
-    <br/>
+    <br>
+    <div v-html="error" class="error" />
+    <br >
     <button @click="register">Register</button>
   </div>
     
@@ -16,16 +18,20 @@ export default {
   data () {
     return {
       email: '',
-      password: ''
+      password: '',
+      error : null
     }
   },
   methods: {
     async register(){
-      const response = await AuthentificationService.register({
+      try {
+        await AuthentificationService.register({
         email: this.email,
         password: this.password
       })
-      console.log(response.data)
+      } catch (error) {
+        this.error = error.response.data.error
+      }      
     }
   }
 }
@@ -33,5 +39,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
+.error{
+  color :red;
+}
 </style>
