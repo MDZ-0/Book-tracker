@@ -11,6 +11,9 @@ const config = {
       host: process.env.HOST || 'localhost',
       storage: './book_tracker.sqlite'
     }
+  },
+  authentication:{
+    jwtSecret : process.env.JWT_SECRET || 'secret'
   }
 }
 
