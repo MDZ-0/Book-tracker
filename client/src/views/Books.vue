@@ -2,6 +2,19 @@
   <div class="home">
     <BooksPage />
     <Panel title="Books">
+      <v-btn  class="purple lighten-3 rounded-pill"
+                    slot="action"
+                    light
+                    @click="navigateTo({
+                      name:'AddBook'
+                    })"
+                    medium
+                    absolute
+                    right 
+                    middle>
+                    <v-icon>
+                    add library_books</v-icon>
+                </v-btn>
       <div 
       v-for="book in books" 
       :key="book.id">
@@ -36,6 +49,11 @@ export default {
       //     year : 'publication year'
       //   }
       // ] 
+    }
+  },
+  methods: {
+    navigateTo(route){
+      this.$router.push(route)
     }
   },
   async mounted (){
