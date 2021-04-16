@@ -27,7 +27,7 @@ app.get('/', (req, res) => {
 // })
 require('./routes')(app)
 
-sequelize.sync().then(() => {
+sequelize.sync({force : false}).then(() => {
   app.listen(port, () => {
     console.log(`Example app listening at http://localhost:${config.port}...`)
   })

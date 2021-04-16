@@ -7,5 +7,8 @@ var BooksServices = {}
 BooksServices.index = function (){
     return Api().get('books')
 }
+BooksServices.post = function (){
+    return Api().post('books')
+}
 
 export default BooksServices
