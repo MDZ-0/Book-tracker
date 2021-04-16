@@ -15,4 +15,7 @@ module.exports = (app) => {
   
   app.post('/books',
     BooksController.post)
+  
+  app.get('/books/:bookId',
+    BooksController.show)
 }

@@ -14,6 +14,17 @@ module.exports = {
       })
     }
   },
+  async show (req, res) {
+    try {
+      const book = await Book.findByPk(req.params.bookId)
+      res.send(book)
+    } catch (err) {
+      console.log("Error:", err),
+      res.status(500).send({
+        error: 'An error occured while trying to get the book'
+      })
+    }
+  },
   async post (req, res) {
     try {
       const book = await Book.create(req.body)
