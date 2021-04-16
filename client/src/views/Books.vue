@@ -4,7 +4,7 @@
     <Panel title="Books">
       <div 
       v-for="book in books" 
-      :key="book.title">
+      :key="book.id">
         {{book.title}} -
         {{book.author}} -
         {{book.year}}
@@ -39,7 +39,8 @@ export default {
     }
   },
   async mounted (){
-    this.books = await BooksServices.index()
+    const response = await BooksServices.index()
+    this.books = response.data
   }
 }
 </script>
