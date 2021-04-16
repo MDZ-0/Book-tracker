@@ -33,4 +33,7 @@ export default {
   color:teal;
   margin-top: 30px
 }
+.red_alert{
+    color: red;
+}
 </style>

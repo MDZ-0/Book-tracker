@@ -4,7 +4,7 @@ module.exports = {
   async index (req, res) {
     try {
       const books = await Book.findAll({
-        limit : 10
+        limit : 20
       })
       res.send(books)
     } catch (err) {
