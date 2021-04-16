@@ -29,6 +29,12 @@
             text dark class="purple">
                 Sign Up
             </v-btn>
+            <v-btn 
+            v-if="$store.state.isUserLoggedIn"
+            @click="logout"
+            text dark class="purple">
+                Log Out
+            </v-btn>
         </v-toolbar-items>
     </v-app-bar>
     
@@ -40,6 +46,13 @@ export default {
         navigateTo(route){
             if(this.$route.name != route.name)
                 this.$router.push(route)
+        },
+        logout(){
+            this.$store.dispatch('setToken', null)
+            this.$store.dispatch('setUser', null)
+            this.$router.push({
+                name:'Home'
+            })
         }
     }
 }
