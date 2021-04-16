@@ -10,7 +10,12 @@
             
         </v-toolbar-title>
         <v-toolbar-items>
+            <!-- <v-btn 
+            text dark class="purple">
+                Browse
+            </v-btn> -->
             <v-btn 
+            @click="navigateTo({name : 'Books'})"
             text dark class="purple">
                 Browse
             </v-btn>

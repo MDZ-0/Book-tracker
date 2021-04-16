@@ -2,10 +2,7 @@
   <v-container width="200px" class="pa-md-4 mx-lg-auto" elevation="12">
     <v-layout column>
       <v-flex xs6 offest-xs3>
-        <div class="white elevation-2">
-          <v-toolbar flat dense class="purple" dark>
-            <v-toolbar-title>Login</v-toolbar-title>
-          </v-toolbar>
+        <Panel title="Login">
           <div class="centered-input pl-4 pr-4 pt-2 pb-2"> 
             <v-text-field label="Email" v-model="email"></v-text-field>
             <br>
@@ -15,7 +12,7 @@
             <br >
             <v-btn class="white--text purple" @click="login">Login</v-btn>
           </div>
-        </div>
+          </Panel>
       </v-flex>
     </v-layout>  
   </v-container> 
@@ -23,6 +20,7 @@
 
 <script>
 import AuthentificationService from '@/services/AuthentificationService'
+import Panel from './Panel'
 export default {
   data () {
     return {
@@ -30,6 +28,9 @@ export default {
       password: '',
       error : null
     }
+  },
+  components:{
+    Panel
   },
   methods: {
     async login(){
