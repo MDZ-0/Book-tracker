@@ -13,5 +13,8 @@ BooksServices.post = function (book){
 BooksServices.show = function (bookId){
     return Api().get(`books/${bookId}`)
 }
+BooksServices.put = function (book){
+    return Api().put(`books/${book.id}`, book)
+}
 
 export default BooksServices

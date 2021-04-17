@@ -5,6 +5,7 @@
           <v-textarea
           readonly
           class="afterword"
+          filled
           v-model="afterWord">
           </v-textarea>
         </Panel>

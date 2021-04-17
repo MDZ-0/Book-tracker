@@ -13,6 +13,18 @@
             <div class="book-genre">
               {{book.genre}}
             </div>
+
+            <v-btn 
+            @click="navigateTo({
+              name : 'EditBook',
+              params:{
+                bookId: book.id
+              }
+            })"
+            text dark class="purple">
+            <v-icon>edit</v-icon>
+                Edit
+            </v-btn>
           </v-flex>
 
           <v-flex xs6>
@@ -31,6 +43,12 @@
 import Panel from '../Panel'
   export default {
   components: { Panel },
+  methods: {
+    navigateTo(route){
+      this.$router.push(route)
+      console.log(route)
+    }
+  },
     props: [
         'book'
     ]

@@ -6,6 +6,7 @@ import Login from '../views/Login.vue'
 import Books from '../views/Books.vue'
 import AddBook from '../views/AddBook.vue'
 import ViewBook from '../views/ViewBook.vue'
+import EditBook from '../views/EditBook.vue'
 
 Vue.use(VueRouter)
 
@@ -36,10 +37,16 @@ const routes = [
     component: AddBook
   },
   {
+    path: '/books/edit/:bookId',
+    name: 'EditBook',
+    component: EditBook
+  },
+  {
     path: '/books/:bookId',
     name: 'ViewBook',
     component: ViewBook
   },
+  
   {
     path: '/about',
     name: 'About',

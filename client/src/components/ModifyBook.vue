@@ -54,7 +54,7 @@
                 {{error}}
             </span>
             <br>
-            <v-btn class="white--text purple" @click="create">Create</v-btn>
+            <v-btn class="white--text purple" @click="save">Save</v-btn>
             
           </v-flex>
       </v-layout>
@@ -85,22 +85,34 @@ import BooksServices from '../services/BooksServices'
         }
     },
     methods: {
-        async create() {
+        async save() {
             this.error = null
             const fieldsValidation = Object.keys(this.book).every(key => !!this.book[key])
             if(!fieldsValidation){
                 this.error = "Please fill in all required fields!"
                 return
             }
-            try {
-                await BooksServices.post(this.book)
-                this.$router.push({
-                    name: 'Books'
+            const bookId = this.$store.state.route.params.bookId
+            try {               
+                await BooksServices.put(this.book)
+                 this.$router.push({
+                    name: 'Books',
+                    params:{
+                        bookId: bookId
+                    }
                 })
             } catch (error) {
                 console.log(error)
             }
         }
+    },
+    async mounted() {
+        try {
+                const bookId = this.$store.state.route.params.bookId
+                this.book = (await BooksServices.show(bookId)).data
+            } catch (error) {
+                console.log(error)
+            }
     }
   }
 </script>
