@@ -35,5 +35,21 @@ module.exports = {
         error: 'An error occured while trying to create a book'
       })
     }
-  }
+  },
+  async put (req, res) {
+    try {
+      const book = await Book.update(req.body,{
+        where :{
+          id: req.params.bookId
+        }
+      })
+      res.send(req.body)
+    } catch (err) {
+      console.log("Error:", err),
+      res.status(500).send({
+        error: 'An error occured while trying to create a book'
+      })
+    }
+  },
+
 }

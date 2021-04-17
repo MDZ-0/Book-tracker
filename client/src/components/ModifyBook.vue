@@ -96,7 +96,7 @@ import BooksServices from '../services/BooksServices'
             try {               
                 await BooksServices.put(this.book)
                  this.$router.push({
-                    name: 'Books',
+                    name: 'ViewBook',
                     params:{
                         bookId: bookId
                     }
