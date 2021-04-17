@@ -8,6 +8,15 @@
         <TubeInfo :youtubeId="book.youtubeId"></TubeInfo>
       </v-flex>
     </v-layout>
+
+    <v-layout>
+      <v-flex xs6>
+        <BookBack :backCover="book.backCover"></BookBack>
+      </v-flex>
+      <v-flex xs6>
+        <BookWord :afterWord="book.afterWord"></BookWord>
+      </v-flex>
+    </v-layout>
   </v-container>
 </template>
 
@@ -15,14 +24,18 @@
 import BooksServices from '../../services/BooksServices'
 import BookMeta from './BookMeta.vue'
 import TubeInfo from './TubeInfo.vue'
+import BookWord from './BookWord.vue'
+import BookBack from './BookBack.vue'
   export default {
   components: { 
     BookMeta,
-    TubeInfo
+    TubeInfo,
+    BookWord,
+    BookBack
   },
     data () {
       return {
-        book: null
+        book: {}
       }
     },
     async mounted(){

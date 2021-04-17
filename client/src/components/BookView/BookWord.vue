@@ -1,13 +1,12 @@
 <template>
   <v-container>
     <v-layout>
-        <Panel title="Youtube - Meta Data">
-          <v-layout>
-              <youtube
-              :video-id="youtubeId"
-              :player-width="500"
-              :player-height="210"></youtube>
-        </v-layout>
+        <Panel title="Book After Word">
+          <v-textarea
+          readonly
+          class="afterword"
+          v-model="afterWord">
+          </v-textarea>
         </Panel>
     </v-layout>
   </v-container>
@@ -19,7 +18,7 @@ import Panel from '../Panel'
   export default {
   components: { Panel },
     props: [
-        'youtubeId'
+        'afterWord'
     ]
   }
 </script>
