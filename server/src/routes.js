@@ -1,5 +1,6 @@
 const AuthenticationController = require('./controllers/AuthenticationController')
 const BooksController = require('./controllers/BooksController')
+const BookmarksController = require('./controllers/BookmarksController')
 const AuthenticationControllerPolicy = require('./policies/AuthenticationControllerPolicy')
 
 module.exports = (app) => {
@@ -21,4 +22,7 @@ module.exports = (app) => {
 
   app.put('/books/:bookId',
     BooksController.put)
+
+  app.get('/bookmarks',
+    BookmarksController.index)
 }

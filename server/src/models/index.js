@@ -19,11 +19,16 @@ fs
     file !== 'index.js'
   ).forEach((file) => {
     console.log(path.join(__dirname, file))
-    // const model = sequelize.import(path.join(__dirname, file))
     const model = require(path.join(__dirname, file))(sequelize, Sequelize)
     db[model.name] = model
   })
 
+  // Associations 
+Object.keys(db).forEach(function(modelName){
+  if('associate' in db[modelName]){
+    db[modelName].associate(db)
+  }
+})
 db.sequelize = sequelize
 db.Sequelize = Sequelize
 // Export container
