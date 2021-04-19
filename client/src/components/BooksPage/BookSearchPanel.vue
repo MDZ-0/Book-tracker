@@ -9,6 +9,8 @@
 
 <script>
 import Panel from '../Panel.vue'
+import _ from 'lodash'
+
 export default {
   components: { Panel },
   data () {
@@ -17,7 +19,7 @@ export default {
       }
   },
   watch:{
-      search() {
+      search: _.debounce(async function() {
           const route = {
               name: 'Books'
           }
@@ -27,7 +29,7 @@ export default {
               }
           }
           this.$router.push(route)
-      },
+      },250),
       '$route.query.search': {
           immediate: true,
           deep: true,
