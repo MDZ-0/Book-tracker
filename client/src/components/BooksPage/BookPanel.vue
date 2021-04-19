@@ -39,7 +39,6 @@
               <v-icon invert>pageview</v-icon> 
               View Book</v-btn>
           </v-flex>
-
           <v-flex xs6>
             <img class="book-cover" :src="book.coverImageUrl" />
           </v-flex>
@@ -51,15 +50,13 @@
 
 <script>
 // @ is an alias to /src
-//import BooksPage from '@/components/BooksPage.vue'
 import Panel from '@/components/Panel.vue'
-import BooksServices from '../services/BooksServices'
+import BooksServices from '@/services/BooksServices'
 //import Panel from '../components/Panel.vue'
 
 export default {
   name: 'Books',
   components: {
-    //BooksPage,
     Panel
   },
   data (){
@@ -79,9 +76,14 @@ export default {
       this.$router.push(route)
     }
   },
-  async mounted (){
-    const response = await BooksServices.index()
-    this.books = response.data
+  watch:{
+    '$route.query.search':{
+      immediate: true,
+      async handler(value){
+        const response = await BooksServices.index(value)
+        this.books = response.data
+      }
+    }
   }
 }
 </script>

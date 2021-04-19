@@ -4,8 +4,12 @@ var BooksServices = {}
 // Setting up request
 
 // Get all books
-BooksServices.index = function (){
-    return Api().get('books')
+BooksServices.index = function (search){
+    return Api().get('books',{
+        params:{
+            search: search
+        }
+    })
 }
 BooksServices.post = function (book){
     return Api().post('books', book)
