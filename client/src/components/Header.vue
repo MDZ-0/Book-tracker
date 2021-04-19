@@ -1,12 +1,15 @@
 <template>
     <v-app-bar fixed class=" white--text purple dark">
         <v-toolbar-title class="mr-4">
-            <span
+            <router-link
+            tag="span"
             class="home"
-            @click="navigateTo({name : 'Books'})"
+            :to="{
+                name : 'Books'
+            }"
             >
                 Book Tracker
-            </span>
+            </router-link>
             
         </v-toolbar-title>
         <v-toolbar-items>
@@ -15,7 +18,9 @@
                 Browse
             </v-btn> -->
             <v-btn 
-            @click="navigateTo({name : 'Books'})"
+            :to="{
+                name : 'Books'
+            }"
             text dark class="purple">
                 Browse
             </v-btn>
@@ -24,13 +29,18 @@
         <v-toolbar-items>
             <v-btn 
             v-if="!$store.state.isUserLoggedIn"
-            @click="navigateTo({name : 'Login'})"
+            :to="
+            {
+                name : 'Login'
+            }"
             text dark class="purple">
                 Login
             </v-btn>
             <v-btn 
             v-if="!$store.state.isUserLoggedIn"
-            @click="navigateTo({name : 'Register'})"
+            :to="{
+                name : 'Register'
+            }"
             text dark class="purple">
                 Sign Up
             </v-btn>
@@ -48,10 +58,6 @@
 <script>
 export default {
     methods: {
-        navigateTo(route){
-            if(this.$route.name != route.name)
-                this.$router.push(route)
-        },
         logout(){
             this.$store.dispatch('setToken', null)
             this.$store.dispatch('setUser', null)

@@ -4,9 +4,9 @@
       <v-btn  class="purple lighten-3 rounded-pill"
                     slot="action"
                     light
-                    @click="navigateTo({
+                    :to="{
                       name:'AddBook'
-                    })"
+                    }"
                     medium
                     absolute
                     right 
@@ -30,12 +30,12 @@
               {{book.genre}}
             </div>
             <v-btn class="white--text purple" 
-            @click="navigateTo({
+            :to="{
               name:'ViewBook',
               params:{
                 bookId: book.id,
               }
-            })">
+            }">
               <v-icon invert>pageview</v-icon> 
               View Book</v-btn>
           </v-flex>
@@ -69,11 +69,6 @@ export default {
       //     year : 'publication year'
       //   }
       // ] 
-    }
-  },
-  methods: {
-    navigateTo(route){
-      this.$router.push(route)
     }
   },
   watch:{

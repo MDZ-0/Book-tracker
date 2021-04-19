@@ -15,12 +15,12 @@
             </div>
 
             <v-btn 
-            @click="navigateTo({
+            :to="{
               name : 'EditBook',
               params:{
                 bookId: book.id
               }
-            })"
+            }"
             text dark class="purple">
             <v-icon>edit</v-icon>
                 Edit
@@ -43,12 +43,6 @@
 import Panel from '../Panel'
   export default {
   components: { Panel },
-  methods: {
-    navigateTo(route){
-      this.$router.push(route)
-      console.log(route)
-    }
-  },
     props: [
         'book'
     ]
