@@ -1,3 +1,5 @@
+const path = require('path')
+
 // Container
 
 const config = {
@@ -9,7 +11,7 @@ const config = {
     options: {
       dialect: process.env.DIALECT || 'sqlite',
       host: process.env.HOST || 'localhost',
-      storage: './book_tracker.sqlite'
+      storage: path.resolve(__dirname,'../../book_tracker.sqlite')
     }
   },
   authentication:{

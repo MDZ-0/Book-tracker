@@ -1,0 +1,62 @@
+[
+    {
+       "title":"One Thousand and One Nights",
+       "author":"None",
+       "genre":"Fairy tale, Frame story",
+       "year":1706,
+       "coverImageUrl":"https://imgv2-2-f.scribdassets.com/img/word_document/250021726/original/216x287/74a4b09c2a/1618431881?v=1",
+       "youtubeId":"b_Q28sGwWno",
+       "backCover":"https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/The_Book_of_The_Thousand_Nights_and_a_Night_%28Karmashastra%2C_1885%29_%28cover%29.jpg/220px-The_Book_of_The_Thousand_Nights_and_a_Night_%28Karmashastra%2C_1885%29_%28cover%29.jpg",
+       "afterWord":"None"
+    },
+    {
+       "title":"Another Book",
+       "author":null,
+       "genre":null,
+       "year":null,
+       "coverImageUrl":null,
+       "youtubeId":null,
+       "backCover":null,
+       "afterWord":null
+    },
+    {
+       "title":"Saalma Diary",
+       "author":"Salma",
+       "genre":"Comedy",
+       "year":1996,
+       "coverImageUrl":"None",
+       "youtubeId":"None",
+       "backCover":"aze",
+       "afterWord":"ae"
+    },
+    {
+       "title":"Ramadan Journey",
+       "author":"Sohaib",
+       "genre":"Comedy",
+       "year":2021,
+       "coverImageUrl":"https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/eb823a24-eaf5-4eba-b341-97cd777584ab/d1xe2qm-1c146999-18a9-4d5e-a500-2591f570600a.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3sicGF0aCI6IlwvZlwvZWI4MjNhMjQtZWFmNS00ZWJhLWIzNDEtOTdjZDc3NzU4NGFiXC9kMXhlMnFtLTFjMTQ2OTk5LTE4YTktNGQ1ZS1hNTAwLTI1OTFmNTcwNjAwYS5qcGcifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdfQ.ixsz0l92FS95Lwo4PBQbnGWnqpHyuOLvgAIwoiEJLCM",
+       "youtubeId":"LbFT3xXjJbs",
+       "backCover":"https://wallpaperaccess.com/full/158362.jpg",
+       "afterWord":"Dr. Franken Stein (フランケン・シュタイン, Furanken Shutain) is an eccentric but talented doctor and meister who is known to be the strongest meister to have graduated from Death Weapon Meister Academy and formerly Spirit Albarn's first weapon-partner. He later becomes a teacher at the academy upon Death's request and was later assigned to act as a meister to Marie Mjolnir."
+    },
+    {
+       "title":"Les miserables",
+       "author":"Viktor Hugo",
+       "genre":"Drama, Tragedy",
+       "year":1800,
+       "coverImageUrl":"https://prodimage.images-bn.com/pimages/2940016615394_p0_v1_s550x406.jpg",
+       "youtubeId":"gWa-agMAw-I",
+       "backCover":"http://image.wikifoundry.com/image/1/dxEIgh5bvroTpZHRSFv96w41057/GW398H474/",
+       "afterWord":"Les Misérables is a French historical novel by Victor Hugo, first published in 1862, that is considered one of the greatest novels of the nineteenth century. In the English-speaking world, the novel is usually referred to by its original French title, which can be translated from the French as The Miserable, The Wretched, The Miserable Ones, The Poor Ones, The Wretched Poor, or The Victims. Beginning in 1815 and culminating in the 1832 June Rebellion in Paris, the novel follows the lives and interactions of several characters, focusing on the struggles of ex-convict Jean Valjean and his experience of redemption."
+    },
+    {
+       "title":"Antigone",
+       "author":"Jean anouilh",
+       "genre":"Tragedy",
+       "year":1946,
+       "coverImageUrl":"https://www.ralentirtravaux.com/lettres/lecture/images/antigone.jpeg",
+       "youtubeId":"hf2EkNdHR70",
+       "backCover":"https://g.christianbook.com/g/slideshow/7/78040/main/78040_99_bkc.jpg",
+       "afterWord":"Antigone est une pièce en un acte de Jean Anouilh représentée pour la première fois au théâtre de l'Atelier à Paris le 4 février 1944, durant l'Occupation allemande, dans une mise en scène, des décors et des costumes d'André Barsacq. Réécriture de la pièce éponyme de Sophocle, elle fait partie de la série des Nouvelles Pièces noires, avec Jézabel (1932), Roméo et Jeannette (1946) et Médée (1953)."
+    }
+ ]
